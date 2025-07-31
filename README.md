@@ -15,3 +15,4 @@ https://universe.roboflow.com/kim-seunghyun/my-first-project-go2hk/browse?queryT
 
 https://universe.roboflow.com/test-qgo5x/wheelchair-uv6ju
 https://universe.roboflow.com/car-numbers/wheelchair-vrjdr
+https://universe.roboflow.com/impaired-people-support-system-ve2gu/white-cane-models/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true

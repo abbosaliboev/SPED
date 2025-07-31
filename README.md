@@ -8,3 +8,5 @@ https://universe.roboflow.com/deakin-07shj/vulnerable-group-three-classes/browse
 
 ## 
 https://universe.roboflow.com/kelvin-slsxl/crutches-rg3he/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true
+https://universe.roboflow.com/majal-berkane-0fj3x/crutches
+

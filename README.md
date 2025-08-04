@@ -42,3 +42,67 @@ This project was created by **Team OneAsia** (members from Korea, Japan, and Chi
 
 ## 📂 Project Structure
 
+SmartCare-AI-Light/
+│
+├── data/ # Dataset & annotations
+├── models/ # YOLO & Pose-based models
+├── scripts/ # Detection and control scripts
+├── utils/ # Helper functions
+├── README.md
+└── requirements.tx
+
+
+---
+
+## 🔄 How It Works
+
+### YOLO-based Method
+1. Camera captures crosswalk area
+2. YOLO model detects objects: `wheelchair`, `cane`, `crutch`
+3. If detected → extend pedestrian green light
+
+### Pose-based Method
+1. Camera captures crosswalk area
+2. Pose estimation extracts body keypoints
+3. Classification model or rule-based logic detects mobility difficulty
+4. If detected → extend pedestrian green light
+
+---
+
+## 📌 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/smartcare-ai-light.git
+cd smartcare-ai-light
+
+# Install dependencies
+pip install -r requirements.txt
+```
+▶️ Usage
+bash
+Copy
+Edit
+# Run YOLO-based detection
+python detect_yolo.py
+
+# Run Pose-based detection
+python detect_pose.py
+📊 Future Work
+Integrate with real traffic light systems
+
+Deploy on edge devices for real-time city use
+
+Improve detection for occluded pedestrians
+
+📜 License
+This project is licensed under the MIT License.
+
+🌍 Authors
+Team OneAsia — SPIED 2025 International Workshop (China)
+Members from Korea, Japan, and China
+
+yaml
+Copy
+Edit
+

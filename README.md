@@ -1,3 +1,9 @@
+<h2>📌 Project Overview</h2>
+<p align="center">
+  <img src="./docs/logo.png" alt="Project Logo" width="200">
+</p>
+
+
 # SmartCare AI Light
 
 SmartCare AI Light is an **AI-powered intelligent traffic light system** developed during the **SPIED 2025 International Workshop in China**.  

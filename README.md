@@ -41,7 +41,7 @@ This project was created by **Team OneAsia** (members from Korea, Japan, and Chi
 ---
 
 ## 📂 Project Structure
-
+```
 SmartCare-AI-Light/
 │
 ├── data/                     # Datasets and annotations
@@ -70,7 +70,7 @@ SmartCare-AI-Light/
 ├── requirements.txt          # Python dependencies
 ├── README.md                 # Project overview
 └── LICENSE                   # License file
-
+```
 ---
 
 ## 🔄 How It Works

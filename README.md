@@ -1,6 +1,6 @@
 <h2>📌 Project Overview</h2>
 <p align="center">
-  <img src="./PPT/image.png" alt="Project Logo" width="600">
+  <img src="./PPT/image.png" alt="Project Logo" width="800">
 </p>
 
 

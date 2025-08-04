@@ -44,13 +44,32 @@ This project was created by **Team OneAsia** (members from Korea, Japan, and Chi
 
 SmartCare-AI-Light/
 │
-├── data/ # Dataset & annotations
-├── models/ # YOLO & Pose-based models
-├── scripts/ # Detection and control scripts
-├── utils/ # Helper functions
-├── README.md
-└── requirements.tx
-
+├── data/                     # Datasets and annotations
+│   ├── raw/                   # Original (raw) datasets
+│   ├── processed/             # Cleaned / augmented datasets
+│
+├── models/                   # YOLO and Pose-based model files
+│   ├── yolo/                  # YOLO model configs and weight files
+│   └── pose/                  # Pose-based model configs and weight files
+│
+├── scripts/                  # Main code files
+│   ├── detect_yolo.py         # YOLO-based detection script
+│   ├── detect_pose.py         # Pose-based detection script
+│   ├── train_yolo.py          # YOLO model training script
+│   ├── train_pose.py          # Pose-based model training script
+│   └── utils.py               # Helper functions
+│
+├── utils/                    # Additional helper modules
+│   ├── video_processing.py    # Video stream processing
+│   ├── traffic_light_control.py # Traffic light control (simulation or real)
+│
+├── docs/                     # Documentation and diagrams
+│   ├── system_diagram.png     # System diagram
+│   └── presentation.pptx      # Project presentation slides
+│
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project overview
+└── LICENSE                   # License file
 
 ---
 

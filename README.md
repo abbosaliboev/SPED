@@ -131,3 +131,14 @@ yaml
 Copy
 Edit
 
+
+winget install Python.Python.3.11
+py -3.11 --version
+
+# Loyihaning ildiz papkasida:
+py -3.11 -m venv .venv
+.\.venv\Scripts\activate
+
+python -m pip install -U pip setuptools wheel
+python -m pip install -r requirements.txt
+

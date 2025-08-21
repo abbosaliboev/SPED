@@ -1,15 +1,11 @@
 dataset/
-dataset1/
-dataset2/
 dataset3/
 crops/
-crutches/
-wheelchair/
-nodevice/
 no_device_last/
 person_attr_ds
 person_attr_fixed/
 webcam_frames/
+<<<<<<< HEAD
 
 venv/
 
@@ -20,3 +16,7 @@ venv/
 
 frames_back_cam/
 frames_back_outside/
+=======
+frame/
+nodevice/
+>>>>>>> origin/main

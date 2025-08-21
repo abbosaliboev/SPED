@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Driver Alert</title>
+<style>
+  :root { --ok:#e8fff0; --ok-b:#89d3a2; --warn:#fff6e5; --warn-b:#ffcf8a; }
+  body { font-family: system-ui, Arial; margin:0; padding:16px; background:#f5f5f7; }
+  .card { background:#fff; border-radius:16px; padding:16px; box-shadow:0 6px 24px rgba(0,0,0,.07); }
+  #status { font-size:14px; color:#666; margin-top:8px }
+  #safe { display:none; padding:14px; background:var(--ok); border:1px solid var(--ok-b); border-radius:12px; margin-top:10px; }
+  #alert { display:none; padding:14px; background:var(--warn); border:1px solid var(--warn-b); border-radius:12px; margin-top:10px; }
+  .title { font-weight:700; font-size:18px; }
+  .small { font-size:12px; color:#777; margin-top:8px }
+  button { margin-top:12px; padding:10px 14px; border-radius:12px; border:1px solid #ddd; background:#fff; }
+</style>
+<div class="card">
+  <div class="title">Driver Page</div>
+  <div id="status">Connecting…</div>
+  <div id="safe">✅ Safe. No special pedestrians.</div>
+  <div id="alert">⚠️ Priority pedestrian nearby. Please wait.</div>
+  <div class="small">Keep this page open during the demo.</div>
+  <button id="pingBtn">Send ping</button>
+</div>
+<script>
+const stateUrl = location.origin + "/state";
+const wsUrl = location.origin.replace(/^http/,"ws") + "/ws";
+const st = document.getElementById("status");
+const elSafe = document.getElementById("safe");
+const elAlert = document.getElementById("alert");
+const pingBtn = document.getElementById("pingBtn");
+
+function showAlert(msg){ elAlert.textContent = msg || elAlert.textContent; elAlert.style.display="block"; elSafe.style.display="none"; try{ navigator.vibrate&&navigator.vibrate([180,90,180]); }catch(e){} }
+function showSafe(msg){ elSafe.textContent = msg || elSafe.textContent; elSafe.style.display="block"; elAlert.style.display="none"; }
+
+fetch(stateUrl).then(r=>r.json()).then(s=>{ s.active?showAlert(s.msg):showSafe(s.msg); }).catch(()=>showSafe());
+
+function connectWS(){
+  const ws = new WebSocket(wsUrl);
+  ws.onopen = ()=> st.textContent = "Connected";
+  ws.onmessage = ev => { try{ const d=JSON.parse(ev.data); if(d.kind==="PED_ALERT") showAlert(d.msg); else if(d.kind==="CLEAR") showSafe(); }catch(e){} };
+  ws.onclose = ()=>{ st.textContent="Reconnecting…"; setTimeout(connectWS,1500); };
+  pingBtn.onclick = ()=>{ try{ ws.send("ping"); }catch(e){} };
+}
+connectWS();
+</script>

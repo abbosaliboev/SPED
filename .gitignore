@@ -14,3 +14,9 @@ webcam_frames/
 venv/
 
 .venv311/
+
+*.mp4
+*.MP4
+
+frames_back_cam/
+frames_back_outside/

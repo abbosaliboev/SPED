@@ -4,5 +4,4 @@ crops/
 no_device_last/
 person_attr_ds
 person_attr_fixed/
-frame/
-nodevice
+webcam_frames/

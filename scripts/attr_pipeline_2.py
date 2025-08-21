@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 # =========================
 # =======  CONFIG  ========
 # =========================
-VIDEO_SOURCE = "IMG_4922.mp4" # 0=webcam yoki "C:/path/to/video.mp4"
+VIDEO_SOURCE = 0 # 0=webcam yoki "C:/path/to/video.mp4"
 
 # DETECTOR (person)
 PERSON_MODEL_PATH = "yolov8n.pt"   # yengil va tez
@@ -27,7 +27,7 @@ DETECT_IMGSZ = 640                 # aniqlik uchun 640
 USE_HALF = True                    # CUDA bo'lsa yarim aniqlik
 
 # CLASSIFIER (MNv3)
-ATTR_WEIGHTS = r"C:\Users\dalab\Desktop\Abbos\SmartLight\person_attr_mnv3s.pth"
+ATTR_WEIGHTS = "../person_attr_mnv3s.pth"
 CLS_IMSIZE = 224
 TH_CRUTCHES   = 0.70               # aniqlikni oshirish uchun biroz yuqoriroq
 TH_WHEELCHAIR = 0.65

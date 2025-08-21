@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 # =========================
 # =======  CONFIG  ========
 # =========================
-VIDEO_SOURCE = "new_test_1.mp4"  # 0=webcam yoki "C:/path/to/video.mp4"
+VIDEO_SOURCE = "front_white.mp4"  # 0=webcam yoki "C:/path/to/video.mp4"
 
 # DETECTOR
 PERSON_MODEL_PATH = "yolov8s.pt"   # yengilroq
@@ -34,7 +34,7 @@ GATE_ADD_THRESH = 0.10             # gating bo'lmasa thresholdni +0.10 qattiqlas
 VALID_DEVICES = {"crutches","wheelchair"}
 
 # CLASSIFIER (MNv3)
-ATTR_WEIGHTS = r"C:\Users\dalab\Desktop\Abbos\SmartLight\person_attr_mnv3s.pth"
+ATTR_WEIGHTS = "../person_attr_mnv3s.pth"
 TH_CRUTCHES   = 0.77
 TH_WHEELCHAIR = 0.70
 CLS_IMSIZE = 224
